@@ -1,0 +1,28 @@
+
+<!-----*****  Important Information  *****-----!>
+
+ xmapp software open ;
+ start apache,mysql;
+ 
+
+
+
+ <---------------Its is automatically generated(so worried)-------------------------------------->
+ phpmyadmin->create new database;
+
+ database name -> webdoc;
+
+ database->create new table;
+ table name 1 -> register;(registrationform.php)
+
+  table-structure ->
+ _______________________________________________________________________________
+ |sr.no(optional &usercontrol)||name||gender||dob||mobno||email||password||date|
+ |____________________________||____||______||___||_____||_____||________||____|
+
+ table name 2 -> appointments;(scheduleform.php)
+
+ table-structure ->
+ _____________________________________________________________________________________________
+ |sr.no(optional &usercontrol)||mobno||name||password||doctorname||appointment-datetime||date|
+ |____________________________||_____||____||________||__________||____________________||____|
