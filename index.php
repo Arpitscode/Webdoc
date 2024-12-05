@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
+    $Loginmsg = false;
+} else {
+    $Loginmsg = true;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +33,22 @@ session_start();
                 <div class="herosection">
                     <div class="box-left">
                         <section>
+                            <div class="text-0">
+                                <?php
+                                if ($Loginmsg) {
+                                    echo '<div class="alert alert-success  alert-dismissible fade show " role="alert">
+                                    <strong>Successfully!</strong>you are loggedin.
+                                     <button type="button" class ="btn-close" data-bs-dismiss="alert" aria-label="Close"
+                                     </button> </div>';
+                                }
+                                if (!$Loginmsg) {
+                                    echo '<div class="alert alert-danger  alert-dismissible fade show " role="alert">
+                                    <strong>Error!</strong> Please,Login First Then You Can Book Appointment.
+                                    <button type="button" class ="btn-close" onclick="" data-bs-dismiss="alert" aria-label="Close">
+                                    </button></div>';
+                                }
+                                ?>
+                            </div>
                             <div class="text-1">
                                 <h1>Your Road to Wellness Beging Here</h1>
                             </div>
@@ -286,8 +307,6 @@ session_start();
                 </div>
             </div>
         </section>
-
-
         <section>
             <div class="textsection-1">
                 <div class="text-item-box-1" style="padding: .8rem 1rem; border-radius:12rem; background-color: rgb(74, 94, 95);">QUR BLOG</div>
@@ -299,7 +318,6 @@ session_start();
             </div>
         </section>
     </main>
-
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -343,9 +361,6 @@ session_start();
             </div>
         </div>
     </footer>
-
-
-
 </body>
 
 </html>
