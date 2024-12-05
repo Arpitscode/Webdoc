@@ -85,6 +85,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="New Password">New Password:</label>
             <input type="password" class="form-control" name="npassword" id="npassword">
         </div>
+        <div class="form-group m-3">
+            <input type="checkbox" class="form-control-checkbox" name="conformation" id="conformation" required>
+            <label for="Conformation">Are you agree? For Change Your Password </label>
+        </div>
         <div class="form-group m-4">
             <button type="submit" class="btn btn-primary">Password forget</button>
             <button type="reset" class="btn btn-primary">Reset</button>
